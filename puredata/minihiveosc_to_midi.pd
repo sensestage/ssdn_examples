@@ -1,4 +1,4 @@
-#N canvas 404 115 793 609 10;
+#N canvas 13 84 793 609 10;
 #X obj 69 371 makenote;
 #X floatatom 70 401 5 0 0 0 - - -;
 #X floatatom 116 408 5 0 0 0 - - -;
@@ -36,7 +36,7 @@
 #X obj 478 -8 print MINIBEE_STATUS;
 #X obj 285 -8 print MINIBEE_INFO;
 #X obj 296 298 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6346 1;
 #X floatatom 296 325 5 0 0 0 - - -;
 #X obj 299 353 ctlout 7;
 #X text 105 227 http://en.flossmanuals.net/pure-data/ch067_using-midi/
@@ -46,9 +46,10 @@
 ;
 #X obj 36 239 >;
 #X obj 69 186 hsl 128 15 0 1 0 0 empty empty threshold_value -2 -8
-0 10 -262144 -1 -1 7900 1;
+0 10 -262144 -1 -1 6800 1;
 #X floatatom 59 212 5 0 0 0 - - -;
 #X text 2 151 trigger note when above the threshold;
+#X obj 98 255 gate;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 1 0 3 0;
@@ -81,6 +82,8 @@
 #X connect 34 0 35 0;
 #X connect 35 0 36 0;
 #X connect 38 0 34 0;
-#X connect 40 0 7 0;
+#X connect 40 0 44 0;
+#X connect 40 0 44 1;
 #X connect 41 0 42 0;
 #X connect 42 0 40 1;
+#X connect 44 0 7 0;
